@@ -4,13 +4,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { User, Code2, ShieldCheck, Database, Laptop, Bot, LineChart, Lock } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import { prefix } from "@/utils/prefix";
+
+import mohamedImg from "@/assets/mohamed.jpeg";
+import ahmedImg from "@/assets/ahmed.jpg";
+import gamalImg from "@/assets/gamal.jpeg";
+import kareemImg from "@/assets/kareem.jpeg";
+import omarImg from "@/assets/omar.jpeg";
+import mahmoudImg from "@/assets/mahmoud.jpeg";
 
 const teamData = [
   {
     name: { en: "Mohmed Ramadan", ar: "محمد رمضان" },
     role: { en: "Founder & CEO", ar: "المؤسس والرئيس التنفيذي" },
-    image: `${prefix}/mohamed.jpeg`,
+    image: mohamedImg,
     bio: { 
       en: "Founder of EU-BUS. Visionary leader transforming student transportation.",
       ar: "مؤسس EU-BUS. قائد صاحب رؤية يعمل على تحويل نقل الطلاب من خلال التكنولوجيا."
@@ -21,7 +27,7 @@ const teamData = [
   {
     name: { en: "Ahmed Yousef", ar: "أحمد يوسف" },
     role: { en: "CDO - Data & Analytics Lead", ar: "الرئيس التنفيذي للبيانات - قائد البيانات والتحليلات" },
-    image: `${prefix}/ahmed.jpg`,
+    image: ahmedImg,
     bio: {
       en: "Data Analyst | DTU ICPC Instructor | ECPC 2024 Participant. Certified: DataCamp Python Data Associate.",
       ar: "Data Analyst | مدرب DTU ICPC | مشارك في ECPC 2024. معتمد: مساعد بيانات Python من DataCamp."
@@ -32,7 +38,7 @@ const teamData = [
   {
     name: { en: "Gamal Abdelnasser", ar: "جمال عبد الناصر" },
     role: { en: "Mobile Dev & AI Integration Lead", ar: "قائد تطوير الهاتف وتكامل الذكاء الاصطناعي" },
-    image: `${prefix}/gamal.jpeg`,
+    image: gamalImg,
     bio: {
       en: "Flutter & Android Native Developer. AI-Augmented Development Expert (Cursor, Windsurf, n8n). Delivered 100% automated systems.",
       ar: "مطور Flutter و Android Native. خبير التطوير المعزز بالذكاء الاصطناعي. سلم أنظمة آلية بنسبة 100٪."
@@ -43,7 +49,7 @@ const teamData = [
   {
     name: { en: "Karim Mohamed", ar: "كريم محمد" },
     role: { en: "CISO - Tech Infrastructure Lead", ar: "مسؤول أمن المعلومات - قائد البنية التحتية التقنية" },
-    image: `${prefix}/kareem.jpeg`,
+    image: kareemImg,
     bio: {
       en: "Huawei Student Ambassador. Network & Cybersecurity Specialist.",
       ar: "سفير طلاب Huawei. أخصائي الشبكات والأمن السيبراني."
@@ -54,7 +60,7 @@ const teamData = [
   {
     name: { en: "Omar", ar: "عمر" },
     role: { en: "App Security & Risk Specialist", ar: "أخصائي أمن التطبيقات وإدارة المخاطر" },
-    image: `${prefix}/omar.jpeg`,
+    image: omarImg,
     bio: {
       en: "Cybersecurity & Vulnerability Assessment Expert. Focus: Secure Application Development & Risk Mitigation.",
       ar: "خبير الأمن السيبراني وتقييم الثغرات. التركيز: تطوير التطبيقات الآمنة وتخفيف المخاطر."
@@ -65,7 +71,7 @@ const teamData = [
   {
     name: { en: "Mahmoud Mohammed", ar: "محمود محمد" },
     role: { en: "Backend Dev & System Admin", ar: "مطور واجهة خلفية ومسؤول نظام" },
-    image: `${prefix}/mahmoud.jpeg`,
+    image: mahmoudImg,
     bio: {
       en: "Ex-Student at DEPI. Works at German hospital as IT specialist. Freelance Backend Developer.",
       ar: "طالب سابق في DEPI. يعمل في المستشفى الألماني كأخصائي تكنولوجيا المعلومات. مطور مستقل."
