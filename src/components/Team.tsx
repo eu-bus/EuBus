@@ -21,7 +21,7 @@ const teamData = [
   {
     name: { en: "Ahmed Yousef", ar: "أحمد يوسف" },
     role: { en: "CDO - Data & Analytics Lead", ar: "الرئيس التنفيذي للبيانات - قائد البيانات والتحليلات" },
-    image: `${prefix}/Ahmed.jpg`,
+    image: `${prefix}/ahmed.jpg`,
     bio: {
       en: "Data Analyst | DTU ICPC Instructor | ECPC 2024 Participant. Certified: DataCamp Python Data Associate.",
       ar: "Data Analyst | مدرب DTU ICPC | مشارك في ECPC 2024. معتمد: مساعد بيانات Python من DataCamp."

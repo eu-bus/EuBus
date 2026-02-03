@@ -49,7 +49,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-0 bg-[30%_center] md:bg-center bg-cover bg-no-repeat transition-opacity duration-500"
         style={{
-          backgroundImage: `url('${prefix}/banner.PNG')`,
+          backgroundImage: `url('${prefix}/banner.png')`,
         }}
       >
         <div className="absolute inset-0 bg-white/0 dark:bg-black/60 transition-colors duration-500" />
