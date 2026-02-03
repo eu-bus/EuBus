@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Bus, Menu, X, Globe } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
+import logo from "@/assets/logo.png";
 import { ThemeToggle } from "./ThemeToggle";
 
 export default function Navbar() {
@@ -23,8 +25,8 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 group"
             >
-              <div className="bg-blue-600 p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
-                <Bus className="h-6 w-6 text-white" />
+              <div className="relative w-10 h-10 rounded-lg overflow-hidden group-hover:opacity-80 transition-opacity">
+                <Image src={logo} alt="EU-BUS Logo" fill className="object-cover" />
               </div>
               <span className="text-gray-900 dark:text-white font-bold text-xl tracking-wider transition-colors">
                 EU-BUS

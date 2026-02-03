@@ -62,13 +62,13 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 transition-colors duration-300">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 transition-colors duration-300">
             EU-BUS
           </h1>
-          <p className="text-xl md:text-2xl text-black dark:text-gray-200 mb-8 max-w-2xl mx-auto transition-colors duration-300">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto transition-colors duration-300">
             Your Safe Journey to Success
             <br />
-            <span className="text-lg text-black dark:text-gray-300 mt-2 block font-arabic transition-colors duration-300">
+            <span className="text-lg text-white mt-2 block font-arabic transition-colors duration-300">
               رحلتك الآمنة نحو النجاح
             </span>
           </p>
