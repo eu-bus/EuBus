@@ -13,6 +13,11 @@ import kareemImg from "@/assets/kareem.jpeg";
 import omarImg from "@/assets/omar.jpeg";
 import mahmoudImg from "@/assets/mahmoud.jpeg";
 
+const linkedinUrl = encodeURI(
+  "https://www.linkedin.com/in/‪gamal-abd-elnaser-01a24a249"
+);
+
+
 const teamData = [
   {
     name: { en: "Mohmed Ramadan", ar: "محمد رمضان" },
@@ -48,7 +53,7 @@ const teamData = [
     },
     skills: ["Clean Architecture", "State Management", "AI Automation"],
     icon: <Bot className="w-5 h-5" />,
-    linkedin: "https://www.linkedin.com/in/gamal-abd-elnaser-01a24a249",
+    linkedin: {linkedinUrl},
   },
   {
     name: { en: "Karim Mohamed", ar: "كريم محمد" },
