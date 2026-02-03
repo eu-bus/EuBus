@@ -48,7 +48,7 @@ const teamData = [
     },
     skills: ["Clean Architecture", "State Management", "AI Automation"],
     icon: <Bot className="w-5 h-5" />,
-    linkedin: "linkedin.com/in/gamal-abd-elnaser-01a24a249",
+    linkedin: "https://www.linkedin.com/in/gamal-abd-elnaser-01a24a249",
   },
   {
     name: { en: "Karim Mohamed", ar: "كريم محمد" },
