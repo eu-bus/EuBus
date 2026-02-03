@@ -103,9 +103,9 @@ const TeamCard = ({ member, index, language, t }: { member: any, index: number, 
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative bg-white dark:bg-zinc-800/50 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-zinc-700/50 hover:border-blue-500 dark:hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group overflow-hidden hover:bg-white dark:hover:bg-zinc-800 block cursor-pointer h-[400px]"
+      className="relative bg-white dark:bg-zinc-800/50 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-zinc-700/50 hover:border-blue-500 dark:hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group overflow-hidden hover:bg-white dark:hover:bg-zinc-800 block cursor-pointer"
     >
-      <div className="flex flex-col items-center text-center p-6 h-full">
+      <div className="flex flex-col items-center text-center p-6">
         <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-gray-100 dark:border-zinc-700 group-hover:border-blue-500 transition-colors shadow-lg shrink-0">
           {member.image ? (
             <Image 
@@ -129,20 +129,26 @@ const TeamCard = ({ member, index, language, t }: { member: any, index: number, 
           <span className="font-arabic">{language === 'en' ? member.role.en : member.role.ar}</span>
         </div>
         
-        {/* Overlay Section - Mobile: InView, Desktop: Hover */}
-        <div className={`absolute inset-x-0 bottom-0 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md p-6 transform transition-transform duration-500 ease-in-out border-t border-gray-100 dark:border-zinc-700 flex flex-col justify-center h-[60%] ${isInView ? 'translate-y-0' : 'translate-y-full'} md:translate-y-full md:group-hover:translate-y-0`}>
-            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed font-arabic mb-3 transition-colors duration-300">
-              {language === 'en' ? member.bio.en : member.bio.ar}
-            </p>
-            {member.skills && member.skills.length > 0 && (
-              <div className="flex flex-wrap gap-2 justify-center">
-                {member.skills.map((skill: string, i: number) => (
-                  <span key={i} className="text-[10px] bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 px-2 py-1 rounded-md transition-colors duration-300">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            )}
+        {/* Details Section - Mobile: Expand on Scroll | Desktop: Always Visible */}
+        <div className={`
+             transition-all duration-700 ease-in-out overflow-hidden
+             md:max-h-none md:opacity-100 md:mt-4
+             ${isInView ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}
+        `}>
+            <div className="pt-4 border-t border-gray-100 dark:border-zinc-700/50">
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed font-arabic mb-3 transition-colors duration-300">
+                  {language === 'en' ? member.bio.en : member.bio.ar}
+                </p>
+                {member.skills && member.skills.length > 0 && (
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {member.skills.map((skill: string, i: number) => (
+                      <span key={i} className="text-[10px] bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 px-2 py-1 rounded-md transition-colors duration-300">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                )}
+            </div>
         </div>
       </div>
     </motion.a>
