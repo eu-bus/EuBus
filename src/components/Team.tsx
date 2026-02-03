@@ -53,7 +53,7 @@ const teamData = [
     },
     skills: ["Clean Architecture", "State Management", "AI Automation"],
     icon: <Bot className="w-5 h-5" />,
-    linkedin: {linkedinUrl},
+    linkedin: linkedinUrl,
   },
   {
     name: { en: "Karim Mohamed", ar: "كريم محمد" },
