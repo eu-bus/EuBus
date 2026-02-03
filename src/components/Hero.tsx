@@ -52,7 +52,7 @@ export default function Hero() {
           backgroundImage: `url('${banner.src}')`,
         }}
       >
-        <div className="absolute inset-0 bg-white/0 dark:bg-black/60 transition-colors duration-500" />
+        <div className="absolute inset-0 bg-black/50 dark:bg-black/70 backdrop-blur-[2px] transition-all duration-500" />
         <NetworkAnimation variant="mixed" />
       </div>
 
