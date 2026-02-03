@@ -22,7 +22,8 @@ const teamData = [
       ar: "مؤسس EU-BUS. قائد صاحب رؤية يعمل على تحويل نقل الطلاب من خلال التكنولوجيا."
     },
     skills: [],
-    icon: <User className="w-5 h-5" />
+    icon: <User className="w-5 h-5" />,
+    linkedin: "https://www.linkedin.com/in/mohamed-ramadan-khader-47b929341"
   },
   {
     name: { en: "Ahmed Yousef", ar: "أحمد يوسف" },
@@ -33,7 +34,8 @@ const teamData = [
       ar: "Data Analyst | مدرب DTU ICPC | مشارك في ECPC 2024. معتمد: مساعد بيانات Python من DataCamp."
     },
     skills: ["Python", "SQL", "Power BI", "Data Visualization"],
-    icon: <LineChart className="w-5 h-5" />
+    icon: <LineChart className="w-5 h-5" />,
+    linkedin: "https://www.linkedin.com/in/ahmed-yousef-273050350/"
   },
   {
     name: { en: "Gamal Abdelnasser", ar: "جمال عبد الناصر" },
@@ -44,7 +46,8 @@ const teamData = [
       ar: "مطور Flutter و Android Native. خبير التطوير المعزز بالذكاء الاصطناعي. سلم أنظمة آلية بنسبة 100٪."
     },
     skills: ["Clean Architecture", "State Management", "AI Automation"],
-    icon: <Bot className="w-5 h-5" />
+    icon: <Bot className="w-5 h-5" />,
+    linkedin: "https://www.linkedin.com/in/gamal-abd-elnaser-01a24a249"
   },
   {
     name: { en: "Karim Mohamed", ar: "كريم محمد" },
@@ -55,7 +58,8 @@ const teamData = [
       ar: "سفير طلاب Huawei. أخصائي الشبكات والأمن السيبراني."
     },
     skills: ["CCNA", "MCSA", "Cybersecurity", "Penetration Testing"],
-    icon: <ShieldCheck className="w-5 h-5" />
+    icon: <ShieldCheck className="w-5 h-5" />,
+    linkedin: "https://www.linkedin.com/in/kareem-mohamed-61a47b369"
   },
   {
     name: { en: "Omar", ar: "عمر" },
@@ -66,7 +70,8 @@ const teamData = [
       ar: "خبير الأمن السيبراني وتقييم الثغرات. التركيز: تطوير التطبيقات الآمنة وتخفيف المخاطر."
     },
     skills: ["Security Best Practices", "Threat Analysis", "Compliance", "SOC Analysis"],
-    icon: <Lock className="w-5 h-5" />
+    icon: <Lock className="w-5 h-5" />,
+    linkedin: "https://www.linkedin.com/in/omar-essam-3838563a3"
   },
   {
     name: { en: "Mahmoud Mohammed", ar: "محمود محمد" },
@@ -77,7 +82,8 @@ const teamData = [
       ar: "طالب سابق في DEPI. يعمل في المستشفى الألماني كأخصائي تكنولوجيا المعلومات. مطور مستقل."
     },
     skills: ["System Admin", "Comparative Programming"],
-    icon: <Database className="w-5 h-5" />
+    icon: <Database className="w-5 h-5" />,
+    linkedin: "https://www.linkedin.com/in/mahmoud-muhammad-a71ab7318"
   },
 ];
 
@@ -107,13 +113,16 @@ export default function Team() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center" dir={language === 'ar' ? 'rtl' : 'ltr'}>
           {teamData.map((member, index) => (
-            <motion.div
+            <motion.a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-zinc-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-zinc-700/50 hover:border-blue-500 dark:hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group overflow-hidden hover:bg-white dark:hover:bg-zinc-800"
+              className="bg-white dark:bg-zinc-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-zinc-700/50 hover:border-blue-500 dark:hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group overflow-hidden hover:bg-white dark:hover:bg-zinc-800 block cursor-pointer"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-gray-100 dark:border-zinc-700 group-hover:border-blue-500 transition-colors shadow-lg">
@@ -158,7 +167,7 @@ export default function Team() {
                 </div>
 
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>
