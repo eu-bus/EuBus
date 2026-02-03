@@ -122,10 +122,10 @@ export default function Team() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-zinc-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 dark:border-zinc-700/50 hover:border-blue-500 dark:hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group overflow-hidden hover:bg-white dark:hover:bg-zinc-800 block cursor-pointer"
+              className="relative  bg-white dark:bg-zinc-800/50 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-zinc-700/50 hover:border-blue-500 dark:hover:border-blue-500/30 hover:shadow-xl transition-all duration-300 group overflow-hidden hover:bg-white dark:hover:bg-zinc-800 block cursor-pointer h-[400px]"
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-gray-100 dark:border-zinc-700 group-hover:border-blue-500 transition-colors shadow-lg">
+              <div className="flex flex-col items-center text-center p-6 h-full">
+                <div className="relative w-32 h-32 mb-6 rounded-full overflow-hidden border-4 border-gray-100 dark:border-zinc-700 group-hover:border-blue-500 transition-colors shadow-lg shrink-0">
                   {member.image ? (
                     <Image 
                       src={member.image} 
@@ -148,9 +148,8 @@ export default function Team() {
                   <span className="font-arabic">{language === 'en' ? member.role.en : member.role.ar}</span>
                 </div>
                 
-                {/* Expandable Section */}
-                <div className="max-h-0 overflow-hidden group-hover:max-h-[300px] transition-all duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-                  <div className="pt-4 mt-2 border-t border-gray-100 dark:border-zinc-700/50">
+                {/* Overlay Section - Slides up on hover */}
+                <div className="absolute inset-x-0 bottom-0 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out border-t border-gray-100 dark:border-zinc-700 flex flex-col justify-center h-[60%]">
                     <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed font-arabic mb-3 transition-colors duration-300">
                       {language === 'en' ? member.bio.en : member.bio.ar}
                     </p>
@@ -163,9 +162,7 @@ export default function Team() {
                         ))}
                       </div>
                     )}
-                  </div>
                 </div>
-
               </div>
             </motion.a>
           ))}
